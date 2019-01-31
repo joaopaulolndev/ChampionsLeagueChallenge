@@ -26,15 +26,20 @@ Challenge using Sanic Framework base in Python 3 with Champions League datasets
 <br />País
 <br />Número de títulos da champions league 
 <br /><br />  
+-<b>5. /api/champions-league/:season/group-stage/</b> 
+<br/>Lista dos grupos da temporada em questão com suas respectivas equipas
+<br/>Considerar apenas a classificação final dos grupos
+<br/><br/>
+-<b>6. /api/champions-league/:season/group-stage/<name>/</b> 
+<br/> Considerar apenas a classificação final do grupo em questão
+<br /> <br />   
+-<b>7. /api/champions-league/:season/round-of-16/</b> 
+<br /> Lista do chaveamento [Equipa 1 vs Equipa 2, ..., Equipa 15 vs Equipa 16]
+<br /><br />  
 
 
-/api/champions-league/<season>/group-stage/
-Lista dos grupos da temporada em questão com suas respectivas equipas
-Considerar apenas a classificação final dos grupos
-/api/champions-league/<season>/group-stage/<name>/
-Considerar apenas a classificação final do grupo em questão
-/api/champions-league/<season>/round-of-16/
-Lista do chaveamento [Equipa 1 vs Equipa 2, ..., Equipa 15 vs Equipa 16]
+
+
 /api/champions-league/<season>/round-of-16/<team1>/vs/<team2>/
 Deve mostrar o resultado da partida entre Equipa 1 vs Equipa 2. 
 Equipa 1 deve ser considerada como a equipa que joga em casa.
