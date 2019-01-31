@@ -133,4 +133,5 @@ Every parameter must be considered as a string.
     
 ## References:
 
+    - [UEFA Champions League Wikipedia](https://en.wikipedia.org/wiki/UEFA_Champions_League)
 
