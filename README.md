@@ -133,7 +133,7 @@ Every parameter must be considered as a string.
    
    * &lt;season&gt; : 2016-17, 2017-28...
    * group-stage/&lt;season&gt;/ : A, B, C, D, E, F, G, H
-   * &lt;team1&gt; and &lt;team2&gt; : use somente a key do time / use only the team key :
+   * &lt;team1&gt; and &lt;team2&gt; : use somente a key do time / use only the team key : <br/>
    anderlecht, feyenoord, porto, benfica, sportinglisboa, cskamoskva, spartak, celtic,
    besiktas, donezk, maribor, qarabag, olympiacos, apoel, barcelona, liverpool, bayern,
    dortmund, leipzig, chelsea, tottenham, manutd, mancity, madrid, atletico, sevilla,
