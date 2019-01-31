@@ -30,7 +30,7 @@ Every parameter must be considered as a string.
 </p>
 
 ## Requirements:
-   * Python >= 3.5+
+   * Python 3.6
    * Sanic Framework 18.12
     
 <p align="center">
