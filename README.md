@@ -146,5 +146,8 @@ Every parameter must be considered as a string.
    - [2017–18 UEFA Champions League](https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League)
    - [2016–17 UEFA Champions League](https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League)
    - [Open Football](https://github.com/openfootball/football.json)
+   - [Postman](https://www.getpostman.com/)
+   - [Git](https://git-scm.com/)
+   - [PyCharm](https://www.jetbrains.com/pycharm/)
    - [Shields IO](https://shields.io/#/)
 
