@@ -7,7 +7,7 @@
   </a>
 </p>
 
-## About Champions League REST API Challenge
+## About Champions League REST API Challenge:
 
 <p>Desafio Champions league, using Python 3 and Sanic Framework.</p>
 <p>Champions League Challenge, using Python 3 and Sanic Framework.</p>
@@ -29,7 +29,7 @@ Routes can receive a <parameter>.
 Every parameter must be considered as a string.
 </p>
 
-## Requirements
+## Requirements:
     * Python >= 3.5+
     * Sanic 18.12
     
@@ -41,7 +41,7 @@ Every parameter must be considered as a string.
   <img src="https://img.shields.io/badge/Sanic%20Framework-18.12-red.svg" alt="">
 </p>
 
-## Run
+## Run:
     Run this code > python3 main.py 
     Open the Browser http://0.0.0.0:8000
        
