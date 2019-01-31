@@ -29,20 +29,17 @@ Routes can receive a <parameter>.
 Every parameter must be considered as a string.
 </p>
 
+## Requirements
+    * Python >= 3.5+
+    * Sanic 18.12
+    
 <p align="center">
   <img alt="" src="https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue.svg">
   <img src="https://img.shields.io/badge/size-465.%20kB-green.svg" alt="">
   <img src="https://img.shields.io/badge/license-MIT-000.svg" alt="">
   <img src="https://img.shields.io/badge/platform-windows%20%7C%20macos%20%7C%20linux-lightgrey.svg" alt="">
-  
-  
 </p>
 
-
-## Requirements
-    * Python >= 3.5+
-    * Sanic 18.12
-    
 ## Run
     Run this code > python3 main.py 
     Open the Browser http://0.0.0.0:8000
