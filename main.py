@@ -85,6 +85,37 @@ async def round16(request, season):
 
     return json(ret)
 
+# 8. Route round of 16 separated
+@app.route(PATH_API + "/champions-league/<season>/round-of-16/<team1>/vs/<team2>", methods=['GET'])
+async def round16TeamVsTeam(request, season, team1, team2):
+    try:
+        ret = ChampionsLeagueModel.getRound16TeamVsTeam(season, team1, team2)
+    except Exception as e:
+        ret = {"error ": str(e)}
+
+    return json(ret)
+
+# 9. Route quarter-finals
+@app.route(PATH_API + "/champions-league/<season>/quarter-finals/<team1>/vs/<team2>", methods=['GET'])
+async def quarterFinalsTeamVsTeam(request, season, team1, team2):
+    try:
+        ret = ChampionsLeagueModel.getQuarterFinalsTeamVsTeam(season, team1, team2)
+    except Exception as e:
+        ret = {"error ": str(e)}
+
+    return json(ret)
+
+# 10. Route semi-finals
+@app.route(PATH_API + "/champions-league/<season>/semi-finals/<team1>/vs/<team2>", methods=['GET'])
+async def semiFinalsTeamVsTeam(request, season, team1, team2):
+    try:
+        ret = ChampionsLeagueModel.getSemiFinalsTeamVsTeam(season, team1, team2)
+    except Exception as e:
+        ret = {"error ": str(e)}
+
+    return json(ret)
+
+
 
 # 11 Route Final
 @app.route(PATH_API + "/champions-league/<season>/final/<team1>/vs/<team2>", methods=['GET'])

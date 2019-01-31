@@ -83,9 +83,95 @@ class ChampionsLeagueModel:
 
         games = dict()
         for i in range(0, len(matches)):
-            games['Match ' + str(i+1)] = str(matches[i]['team1']['name']) + " vs " + str(matches[i]['team2']['name'])
+            games['Match ' + str(i + 1)] = str(matches[i]['team1']['name']) + " vs " + str(matches[i]['team2']['name'])
 
         return games
+
+    # get time vs time
+    def getRound16TeamVsTeam(season, team1, team2):
+
+        if not os.path.isdir("data/" + season):
+            raise Exception('Season not found')
+
+        json_data = open('data/' + season + '/cl.json').read()
+        data = json.loads(json_data)
+
+        game = ChampionsLeagueModel.mountGamePlayoffs(data, team1, team2, 6, 7)
+
+        return game
+
+    # get quarter of finals
+    def getQuarterFinalsTeamVsTeam(season, team1, team2):
+
+        if not os.path.isdir("data/" + season):
+            raise Exception('Season not found')
+
+        json_data = open('data/' + season + '/cl.json').read()
+        data = json.loads(json_data)
+
+        game = ChampionsLeagueModel.mountGamePlayoffs(data, team1, team2, 8, 9)
+
+        return game
+
+    # get quarter of finals
+    def getSemiFinalsTeamVsTeam(season, team1, team2):
+
+        if not os.path.isdir("data/" + season):
+            raise Exception('Season not found')
+
+        json_data = open('data/' + season + '/cl.json').read()
+        data = json.loads(json_data)
+
+        game = ChampionsLeagueModel.mountGamePlayoffs(data, team1, team2, 10, 11)
+
+        return game
+
+    # mount game playoffs
+    def mountGamePlayoffs(data, team1, team2, round1, round2):
+        matches1 = data['rounds'][round1]['matches']
+
+        match1_result = ChampionsLeagueModel.findTeamsInMatches(matches1, team1, team2)
+
+        result = dict()
+        if 'Error' in match1_result:
+            matches2 = data['rounds'][round2]['matches']
+            match2_result = ChampionsLeagueModel.findTeamsInMatches(matches2, team1, team2)
+
+            if 'Error' in match2_result:
+                raise Exception('Match not found')
+            # Encontrou no 2
+            else:
+                result = match2_result
+        # Encontrou no 1
+        else:
+            result = match1_result
+
+        score1 = result['score1']
+        score2 = result['score2']
+
+        game = dict()
+        game['Match'] = str(result['team1']['name']) + ' ' + str(score1) + ' vs ' + str(score2) + ' ' + str(
+            result['team2']['name'])
+
+        return game
+
+    # verifid the games
+    def findTeamsInMatches(matches, t1, t2):
+
+        match_found = dict()
+        for m in range(0, len(matches)):
+
+            if matches[m]['team1']['key'] == t1.lower():
+                if matches[m]['team2']['key'] == t2.lower():
+                    match_found = matches[m]
+                    break
+                else:
+                    match_found = {'Error': 'Team2 ' + t2.lower() + ' Not found'}
+                    break
+            else:
+                match_found = {'Error': 'Team1 ' + t1.lower() + ' Not found'}
+
+        return match_found
 
     # get final
     def getFinal(season, time1, time2):
@@ -96,12 +182,13 @@ class ChampionsLeagueModel:
         json_data = open('data/' + season + '/cl.json').read()
         data = json.loads(json_data)
 
-        qtdRound = ( 18 if season == '2015-16' else 12)
+        # Verifica o numero de rodadas ate a final
+        qtdRound = (18 if season == '2015-16' else 12)
 
         matches = data['rounds'][qtdRound]['matches'][0]
 
         if matches['team1']['key'] != time1.lower():
-             raise Exception('Invalid Team 1')
+            raise Exception('Invalid Team 1')
         if matches['team2']['key'] != time2.lower():
             raise Exception('Invalid Team 2')
 
@@ -109,7 +196,8 @@ class ChampionsLeagueModel:
         score2 = matches['score2']
 
         game = dict()
-        game['Match'] = str(matches['team1']['name'])+' '+str(score1)+" vs "+str(score2)+' '+str(matches['team2']['name'])
+        game['Match'] = str(matches['team1']['name']) + ' ' + str(score1) + " vs " + str(score2) + ' ' + str(
+            matches['team2']['name'])
 
         finals = ChampionsLeagueModel.getAboutBySeason(season)
 
