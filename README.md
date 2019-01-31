@@ -13,7 +13,7 @@ Challenge using Sanic Framework base in Python 3 with Champions League datasets
 <br />Maiores campeões (top 5)
 <br />Melhores marcadores de sempre (top 10)
 <br />
-<b>2. /api/champions-league/<season>/</b>
+<b>2. /api/champions-league/:season/</b>
 <br />País que recebe a final
 <br />Campeão
 <br />Vice-campeão
