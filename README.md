@@ -8,47 +8,47 @@ Challenge using Sanic Framework base in Python 3 with Champions League datasets
 
 ## Recursos:
 
--<b>1. /api/champions-league/</b>
+<b>1. /api/champions-league/</b>
 <br />Breve descrição sobre Liga dos Campeões
 <br />Maiores campeões (top 5)
 <br />Melhores marcadores de sempre (top 10)
 <br />
--<b>2. /api/champions-league/:season/</b>
+<b>2. /api/champions-league/:season/</b>
 <br />País que recebe a final
 <br />Campeão
 <br />Vice-campeão
 <br />
--<b>3. /api/champions-league/:season/teams/</b>
+<b>3. /api/champions-league/:season/teams/</b>
 <br />Lista com todas as equipas da temporada em questão, assim como os seus respectivos nomes e países
 <br />
--<b>4. /api/champions-league/:season/teams/:name/</b> 
+<b>4. /api/champions-league/:season/teams/:name/</b> 
 <br />Nome
 <br />País
 <br />Número de títulos da champions league 
 <br /> 
--<b>5. /api/champions-league/:season/group-stage/</b> 
+<b>5. /api/champions-league/:season/group-stage/</b> 
 <br/>Lista dos grupos da temporada em questão com suas respectivas equipas
 <br/>Considerar apenas a classificação final dos grupos
 <br/>
--<b>6. /api/champions-league/:season/group-stage/<name>/</b> 
+<b>6. /api/champions-league/:season/group-stage/<name>/</b> 
 <br/> Considerar apenas a classificação final do grupo em questão
 <br /> 
--<b>7. /api/champions-league/:season/round-of-16/</b> 
+<b>7. /api/champions-league/:season/round-of-16/</b> 
 <br> Lista do chaveamento [Equipa 1 vs Equipa 2, ..., Equipa 15 vs Equipa 16]
 <br>  
--<b>8. /api/champions-league/<season>/round-of-16/:team1/vs/:team2/</b>  
+<b>8. /api/champions-league/<season>/round-of-16/:team1/vs/:team2/</b>  
 <br/>Deve mostrar o resultado da partida entre Equipa 1 vs Equipa 2. 
 <br/>Equipa 1 deve ser considerada como a equipa que joga em casa.
 <br />
--<b>9. /api/champions-league/:season/quarter-finals/:team1/vs/:team2/</b>  
+<b>9. /api/champions-league/:season/quarter-finals/:team1/vs/:team2/</b>  
 <br />Deve mostrar o resultado da partida entre Equipa 1 vs Equipa 2. 
 <br />Equipa 1 deve ser considerada como a equipa que joga em casa.
 <br />
--<b>10. /api/champions-league/:season/semi-finals/:team1/vs/:team2/</b>  
+<b>10. /api/champions-league/:season/semi-finals/:team1/vs/:team2/</b>  
 <br />Deve mostrar o resultado da partida entre Equipa 1 vs Equipa 2. 
 <br>Equipa 1 deve ser considerada como a equipa que joga em casa.
 <br />
--<b>11. /api/champions-league/:season/final/:team1/vs/:team/</b>  
+<b>11. /api/champions-league/:season/final/:team1/vs/:team/</b>  
 <br />Deve mostrar o resultado da partida entre Equipa 1 vs Equipa 2. 
 <br />Deve mostrar o campeão
 <br>Deve mostrar o vice-campeão
