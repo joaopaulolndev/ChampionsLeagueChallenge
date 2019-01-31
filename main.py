@@ -24,8 +24,6 @@ async def home(request):
 """
 " 1. Route about
 """
-
-
 @app.route(PATH_API + "/champions-league/", methods=['GET'])
 async def about(request):
     return json(ChampionsLeagueModel.getAbout(object))
@@ -34,8 +32,6 @@ async def about(request):
 """
 " 2. Route aboutFinal
 """
-
-
 @app.route(PATH_API + "/champions-league/<season>", methods=['GET'])
 async def aboutFinal(request, season):
     try:
@@ -49,8 +45,6 @@ async def aboutFinal(request, season):
 """
 " 3. Route get all teams
 """
-
-
 @app.route(PATH_API + "/champions-league/<season>/teams/", methods=['GET'])
 async def teams(request, season):
     try:
@@ -64,8 +58,6 @@ async def teams(request, season):
 """
 " 4. Route get one team
 """
-
-
 @app.route(PATH_API + "/champions-league/<season>/teams/<name>", methods=['GET'])
 async def team(request, season, name):
     try:
@@ -79,8 +71,6 @@ async def team(request, season, name):
 """
 " 5. Route get all groups
 """
-
-
 @app.route(PATH_API + "/champions-league/<season>/group-stage/", methods=['GET'])
 async def groups(request, season):
     try:
@@ -94,8 +84,6 @@ async def groups(request, season):
 """
 " 6. Route get one group variable name using only one letter between A and H
 """
-
-
 @app.route(PATH_API + "/champions-league/<season>/group-stage/<name>", methods=['GET'])
 async def group(request, season, name):
     try:
@@ -109,8 +97,6 @@ async def group(request, season, name):
 """
 " 7. Route round of 16
 """
-
-
 @app.route(PATH_API + "/champions-league/<season>/round-of-16/", methods=['GET'])
 async def round16(request, season):
     try:
@@ -124,8 +110,6 @@ async def round16(request, season):
 """
 " 8. Route round of 16 separated
 """
-
-
 @app.route(PATH_API + "/champions-league/<season>/round-of-16/<team1>/vs/<team2>", methods=['GET'])
 async def roundOf16TeamVsTeam(request, season, team1, team2):
     try:
@@ -139,8 +123,6 @@ async def roundOf16TeamVsTeam(request, season, team1, team2):
 """
 " 9. Route quarter-finals
 """
-
-
 @app.route(PATH_API + "/champions-league/<season>/quarter-finals/<team1>/vs/<team2>", methods=['GET'])
 async def quarterFinalsTeamVsTeam(request, season, team1, team2):
     try:
@@ -154,8 +136,6 @@ async def quarterFinalsTeamVsTeam(request, season, team1, team2):
 """
 " 10. Route semi-finals
 """
-
-
 @app.route(PATH_API + "/champions-league/<season>/semi-finals/<team1>/vs/<team2>", methods=['GET'])
 async def semiFinalsTeamVsTeam(request, season, team1, team2):
     try:
@@ -169,8 +149,6 @@ async def semiFinalsTeamVsTeam(request, season, team1, team2):
 """
 " 11 Route Final
 """
-
-
 @app.route(PATH_API + "/champions-league/<season>/final/<team1>/vs/<team2>", methods=['GET'])
 async def group(request, season, team1, team2):
     try:
