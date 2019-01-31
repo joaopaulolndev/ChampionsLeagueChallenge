@@ -12,30 +12,30 @@ Challenge using Sanic Framework base in Python 3 with Champions League datasets
 <br />Breve descrição sobre Liga dos Campeões
 <br />Maiores campeões (top 5)
 <br />Melhores marcadores de sempre (top 10)
-<br /><br />
+<br />
 -<b>2. /api/champions-league/:season/</b>
 <br />País que recebe a final
 <br />Campeão
 <br />Vice-campeão
-<br /><br />
+<br />
 -<b>3. /api/champions-league/:season/teams/</b>
 <br />Lista com todas as equipas da temporada em questão, assim como os seus respectivos nomes e países
-<br /><br />
+<br />
 -<b>4. /api/champions-league/:season/teams/:name/</b> 
 <br />Nome
 <br />País
 <br />Número de títulos da champions league 
-<br /><br />  
+<br /> 
 -<b>5. /api/champions-league/:season/group-stage/</b> 
 <br/>Lista dos grupos da temporada em questão com suas respectivas equipas
 <br/>Considerar apenas a classificação final dos grupos
-<br/><br/>
+<br/>
 -<b>6. /api/champions-league/:season/group-stage/<name>/</b> 
 <br/> Considerar apenas a classificação final do grupo em questão
-<br /> <br />   
+<br /> 
 -<b>7. /api/champions-league/:season/round-of-16/</b> 
 <br /> Lista do chaveamento [Equipa 1 vs Equipa 2, ..., Equipa 15 vs Equipa 16]
-<br /><br />  
+<br />  
 
 
 
