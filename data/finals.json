@@ -1,0 +1,24 @@
+{
+   "finals": {
+     "2017-18": {
+       "country": "Ukraine",
+       "champion": "Real Madrid",
+       "runner-up": "Liverpool"
+     },
+     "2016-17": {
+       "country": "Wales",
+       "champion": "Real Madrid",
+       "runner-up": "Juventus"
+     },
+     "2015-16": {
+       "country": "Spain",
+       "champion": "Real Madrid",
+       "runner-up": "Atletico Madrid"
+     },
+     "2014-15": {
+       "country": "Germany",
+       "champion": "Barcelona",
+       "runner-up": "Juventus"
+     }
+   }
+}

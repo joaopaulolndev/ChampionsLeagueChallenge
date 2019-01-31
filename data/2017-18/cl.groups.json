@@ -1,0 +1,365 @@
+{
+  "name": "Champions League (Europe) 2017/18",
+  "groups": [
+    {
+      "name": "Group A",
+      "teams": [
+        {
+          "key": "benfica",
+          "name": "Benfica",
+          "code": null,
+          "position" : 4,
+          "country": {
+            "key": "pt",
+            "name": "Portugal"
+          }
+        },
+        {
+          "key": "cskamoskva",
+          "name": "CSKA Moskva",
+          "code": null,
+          "position" : 3,
+          "country": {
+            "key": "ru",
+            "name": "Russia"
+          }
+        },
+        {
+          "key": "manutd",
+          "name": "Manchester United",
+          "code": "MUN",
+          "position" : 1,
+          "country": {
+            "key": "eng",
+            "name": "England"
+          }
+        },
+        {
+          "key": "basel",
+          "name": "FC Basel 1893",
+          "code": "BAS",
+          "position" : 2,
+          "country": {
+            "key": "ch",
+            "name": "Switzerland"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Group B",
+      "teams": [
+        {
+          "key": "anderlecht",
+          "name": "Anderlecht",
+          "code": null,
+          "position" : 4,
+          "country": {
+            "key": "be",
+            "name": "Belgium"
+          }
+        },
+        {
+          "key": "celtic",
+          "name": "Celtic",
+          "code": "CEL",
+          "position" : 3,
+          "country": {
+            "key": "sco",
+            "name": "Scotland"
+          }
+        },
+        {
+          "key": "bayern",
+          "name": "FC Bayern München",
+          "code": "FCB",
+          "position" : 2,
+          "country": {
+            "key": "de",
+            "name": "Germany"
+          }
+        },
+        {
+          "key": "paris",
+          "name": "Paris SG",
+          "code": "PSG",
+          "position" : 1,
+          "country": {
+            "key": "fr",
+            "name": "France"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Group C",
+      "teams": [
+        {
+          "key": "qarabag",
+          "name": "Qarabağ FK",
+          "code": null,
+          "position" : 4,
+          "country": {
+            "key": "az",
+            "name": "Azerbaijan"
+          }
+        },
+        {
+          "key": "chelsea",
+          "name": "Chelsea",
+          "code": "CHE",
+          "position" : 2,
+          "country": {
+            "key": "eng",
+            "name": "England"
+          }
+        },
+        {
+          "key": "atletico",
+          "name": "Atlético",
+          "code": "ATL",
+          "position" : 3,
+          "country": {
+            "key": "es",
+            "name": "Spain"
+          }
+        },
+        {
+          "key": "roma",
+          "name": "Roma",
+          "code": "ROM",
+          "position" : 1,
+          "country": {
+            "key": "it",
+            "name": "Italy"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Group D",
+      "teams": [
+        {
+          "key": "sportinglisboa",
+          "name": "Sporting Lisboa",
+          "code": null,
+          "position" : 3,
+          "country": {
+            "key": "pt",
+            "name": "Portugal"
+          }
+        },
+        {
+          "key": "olympiacos",
+          "name": "Olympiakos Piräus",
+          "code": null,
+          "position" : 4,
+          "country": {
+            "key": "gr",
+            "name": "Greece"
+          }
+        },
+        {
+          "key": "barcelona",
+          "name": "Barcelona",
+          "code": null,
+          "position" : 1,
+          "country": {
+            "key": "es",
+            "name": "spain"
+          }
+        },
+        {
+          "key": "juventus",
+          "name": "Juventus",
+          "code": "JUV",
+          "position" : 2,
+          "country": {
+            "key": "it",
+            "name": "Italy"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Group E",
+      "teams": [
+        {
+          "key": "spartak",
+          "name": "Spartak",
+          "code": null,
+          "position" : 3,
+          "country": {
+            "key": "ru",
+            "name": "Russia"
+          }
+        },
+        {
+          "key": "maribor",
+          "name": "Maribor",
+          "code": null,
+          "position" : 4,
+          "country": {
+            "key": "si",
+            "name": "Slovenia"
+          }
+        },
+        {
+          "key": "liverpool",
+          "name": "Liverpool",
+          "code": null,
+          "position" : 1,
+          "country": {
+            "key": "en",
+            "name": "England"
+          }
+        },
+        {
+          "key": "sevilla",
+          "name": "Sevilla",
+          "code": "SEV",
+          "position" : 2,
+          "country": {
+            "key": "es",
+            "name": "Spain"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Group F",
+      "teams": [
+        {
+          "key": "feyenoord",
+          "name": "Feyenoord",
+          "code": null,
+          "position" : 4,
+          "country": {
+            "key": "nl",
+            "name": "Netherlands"
+          }
+        },
+        {
+          "key": "donezk",
+          "name": "Shakhtar Donetsk",
+          "code": null,
+          "position" : 2,
+          "country": {
+            "key": "ua",
+            "name": "Ukraine"
+          }
+        },
+        {
+          "key": "mancity",
+          "name": "Manchester City",
+          "code": "MCI",
+          "position" : 1,
+          "country": {
+            "key": "eng",
+            "name": "England"
+          }
+        },
+        {
+          "key": "napoli",
+          "name": "Napoli",
+          "code": "NAP",
+          "position" : 3,
+          "country": {
+            "key": "it",
+            "name": "Italy"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Group G",
+      "teams": [
+        {
+          "key": "porto",
+          "name": "Porto",
+          "code": null,
+          "position" : 2,
+          "country": {
+            "key": "pt",
+            "name": "Portugal"
+          }
+        },
+        {
+          "key": "besiktas",
+          "name": "Beşiktaş JK",
+          "code": null,
+          "position" : 1,
+          "country": {
+            "key": "tr",
+            "name": "Turkey"
+          }
+        },
+        {
+          "key": "leipzig",
+          "name": "RB Leipzig",
+          "code": "RBL",
+          "position" : 3,
+          "country": {
+            "key": "de",
+            "name": "Germany"
+          }
+        },
+        {
+          "key": "monaco",
+          "name": "AS Monaco",
+          "code": "ASM",
+          "position" : 4,
+          "country": {
+            "key": "mc",
+            "name": "Monaco"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Group H",
+      "teams": [
+        {
+          "key": "apoel",
+          "name": "APOEL",
+          "code": null,
+          "position" : 4,
+          "country": {
+            "key": "cy",
+            "name": "Cyprus"
+          }
+        },
+        {
+          "key": "dortmund",
+          "name": "Borussia Dortmund",
+          "code": "BVB",
+          "position" : 3,
+          "country": {
+            "key": "de",
+            "name": "Germany"
+          }
+        },
+        {
+          "key": "tottenham",
+          "name": "Tottenham Hotspur",
+          "code": "TOT",
+          "position" : 1,
+          "country": {
+            "key": "eng",
+            "name": "England"
+          }
+        },
+        {
+          "key": "madrid",
+          "name": "R. Madrid",
+          "code": "RMD",
+          "position" : 2,
+          "country": {
+            "key": "es",
+            "name": "Spain"
+          }
+        }
+      ]
+    }
+  ]
+}

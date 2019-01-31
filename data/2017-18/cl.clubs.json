@@ -1,0 +1,325 @@
+{
+  "name": "Champions League (Europe) 2017/18",
+  "clubs": [
+    {
+      "key": "anderlecht",
+      "name": "Anderlecht",
+      "code": null,
+      "titles": 0,
+      "country": {
+        "key": "be",
+        "name": "Belgium"
+      }
+    },
+    {
+      "key": "feyenoord",
+      "name": "Feyenoord",
+      "code": null,
+      "titles": 1,
+      "country": {
+        "key": "nl",
+        "name": "Netherlands"
+      }
+    },
+    {
+      "key": "porto",
+      "name": "Porto",
+      "code": null,
+      "titles": 2,
+      "country": {
+        "key": "pt",
+        "name": "Portugal"
+      }
+    },
+    {
+      "key": "benfica",
+      "name": "Benfica",
+      "code": null,
+      "titles": 2,
+      "country": {
+        "key": "pt",
+        "name": "Portugal"
+      }
+    },
+    {
+      "key": "sportinglisboa",
+      "name": "Sporting Lisboa",
+      "code": null,
+      "titles": 0,
+      "country": {
+        "key": "pt",
+        "name": "Portugal"
+      }
+    },
+    {
+      "key": "cskamoskva",
+      "name": "CSKA Moskva",
+      "code": null,
+      "titles": 0,
+      "country": {
+        "key": "ru",
+        "name": "Russia"
+      }
+    },
+    {
+      "key": "spartak",
+      "name": "Spartak",
+      "code": null,
+      "titles": 0,
+      "country": {
+        "key": "ru",
+        "name": "Russia"
+      }
+    },
+    {
+      "key": "celtic",
+      "name": "Celtic",
+      "code": "CEL",
+      "titles": 0,
+      "country": {
+        "key": "sco",
+        "name": "Scotland"
+      }
+    },
+    {
+      "key": "besiktas",
+      "name": "Beşiktaş JK",
+      "code": null,
+      "titles": 0,
+      "country": {
+        "key": "tr",
+        "name": "Turkey"
+      }
+    },
+    {
+      "key": "donezk",
+      "name": "Shakhtar Donetsk",
+      "code": null,
+      "titles": 0,
+      "country": {
+        "key": "ua",
+        "name": "Ukraine"
+      }
+    },
+    {
+      "key": "maribor",
+      "name": "Maribor",
+      "code": null,
+      "titles": 0,
+      "country": {
+        "key": "si",
+        "name": "Slovenia"
+      }
+    },
+    {
+      "key": "qarabag",
+      "name": "Qarabağ FK",
+      "code": null,
+      "titles": 0,
+      "country": {
+        "key": "az",
+        "name": "Azerbaijan"
+      }
+    },
+    {
+      "key": "olympiacos",
+      "name": "Olympiakos Piräus",
+      "code": null,
+      "titles": 0,
+      "country": {
+        "key": "gr",
+        "name": "Greece"
+      }
+    },
+    {
+      "key": "apoel",
+      "name": "APOEL",
+      "code": null,
+      "titles": 0,
+      "country": {
+        "key": "cy",
+        "name": "Cyprus"
+      }
+    },
+    {
+      "key": "barcelona",
+      "name": "Barcelona",
+      "code": null,
+      "titles": 5,
+      "country": {
+        "key": "es",
+        "name": "Spain"
+      }
+    },
+    {
+      "key": "liverpool",
+      "name": "Liverpool",
+      "code": null,
+      "titles": 5,
+      "country": {
+        "key": "en",
+        "name": "England"
+      }
+    },
+    {
+      "key": "bayern",
+      "name": "FC Bayern München",
+      "code": "FCB",
+      "titles": 5,
+      "country": {
+        "key": "de",
+        "name": "Germany"
+      }
+    },
+    {
+      "key": "dortmund",
+      "name": "Borussia Dortmund",
+      "code": "BVB",
+      "titles": 1,
+      "country": {
+        "key": "de",
+        "name": "Germany"
+      }
+    },
+    {
+      "key": "leipzig",
+      "name": "RB Leipzig",
+      "code": "RBL",
+      "titles": 0,
+      "country": {
+        "key": "de",
+        "name": "Germany"
+      }
+    },
+    {
+      "key": "chelsea",
+      "name": "Chelsea",
+      "code": "CHE",
+      "titles": 1,
+      "country": {
+        "key": "eng",
+        "name": "England"
+      }
+    },
+    {
+      "key": "tottenham",
+      "name": "Tottenham Hotspur",
+      "code": "TOT",
+      "titles": 0,
+      "country": {
+        "key": "eng",
+        "name": "England"
+      }
+    },
+    {
+      "key": "manutd",
+      "name": "Manchester United",
+      "code": "MUN",
+      "titles": 3,
+      "country": {
+        "key": "eng",
+        "name": "England"
+      }
+    },
+    {
+      "key": "mancity",
+      "name": "Manchester City",
+      "code": "MCI",
+      "titles": 0,
+      "country": {
+        "key": "eng",
+        "name": "England"
+      }
+    },
+    {
+      "key": "madrid",
+      "name": "Real Madrid",
+      "code": "RMD",
+      "titles": 13,
+      "country": {
+        "key": "es",
+        "name": "Spain"
+      }
+    },
+    {
+      "key": "atletico",
+      "name": "Atlético",
+      "code": "ATL",
+      "titles": 0,
+      "country": {
+        "key": "es",
+        "name": "Spain"
+      }
+    },
+    {
+      "key": "sevilla",
+      "name": "Sevilla",
+      "code": "SEV",
+      "titles": 0,
+      "country": {
+        "key": "es",
+        "name": "Spain"
+      }
+    },
+    {
+      "key": "roma",
+      "name": "Roma",
+      "code": "ROM",
+      "titles": 0,
+      "country": {
+        "key": "it",
+        "name": "Italy"
+      }
+    },
+    {
+      "key": "juventus",
+      "name": "Juventus",
+      "code": "JUV",
+      "titles": 2,
+      "country": {
+        "key": "it",
+        "name": "Italy"
+      }
+    },
+    {
+      "key": "napoli",
+      "name": "Napoli",
+      "code": "NAP",
+      "titles": 0,
+      "country": {
+        "key": "it",
+        "name": "Italy"
+      }
+    },
+    {
+      "key": "paris",
+      "name": "Paris SG",
+      "code": "PSG",
+      "titles": 0,
+      "country": {
+        "key": "fr",
+        "name": "France"
+      }
+    },
+    {
+      "key": "monaco",
+      "name": "AS Monaco",
+      "code": "ASM",
+      "titles": 0,
+      "country": {
+        "key": "mc",
+        "name": "Monaco"
+      }
+    },
+    {
+      "key": "basel",
+      "name": "FC Basel 1893",
+      "code": "BAS",
+      "titles": 0,
+      "country": {
+        "key": "ch",
+        "name": "Switzerland"
+      }
+    }
+  ]
+}

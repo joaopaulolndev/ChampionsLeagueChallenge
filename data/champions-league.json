@@ -1,0 +1,77 @@
+{
+   "description": "The UEFA Champions League (abbreviated as UCL) is an annual club football competition organised by the Union of European Football Associations (UEFA) and contested by top-division European clubs. It is one of the most prestigious tournaments in the world and the most prestigious club competition in European football, played by the national league champions (and, for some nations, one or more runners-up) of the strongest UEFA national associations.",
+   "topChampions" : {
+     "1": {
+       "team": "Real Madrid",
+       "titles": 13
+     },
+     "2":{
+       "team": "Milan",
+       "titles": 7
+     },
+     "3":{
+       "team": "Bayern Munich",
+       "titles": 5
+     },
+     "4":{
+       "team": "Liverpool",
+       "titles": 5
+     },
+     "5":{
+       "team": "Barcelona",
+       "titles": 5
+     }
+   },
+   "topScorers": {
+     "1": {
+       "player": "Cristiano Ronaldo",
+       "goals": 121,
+       "country": "Portugal"
+     },
+     "2": {
+       "player": "Lionel Messi",
+       "goals": 106,
+       "country": "Argentina"
+     },
+     "3": {
+       "player": "Raúl",
+       "goals": 71,
+       "country": "Spain"
+     },
+     "4": {
+       "player": "Karim Benzema",
+       "goals": 59,
+       "country": "France"
+     },
+     "5": {
+       "player": "Ruud van Nistelrooy",
+       "goals": 56,
+       "country": "Netherlands"
+     },
+     "6": {
+       "player": "Robert Lewandowski",
+       "goals": 53,
+       "country": "Poland"
+     },
+     "7": {
+       "player": "Thierry Henry",
+       "goals": 50,
+       "country": "France"
+     },
+     "8": {
+       "player": "Alfredo Di Stéfano",
+       "goals": 49,
+       "country": "Argentina"
+     },
+     "9": {
+       "player": "Andriy Shevchenko",
+       "goals": 48,
+       "country": "Ukraine"
+     },
+     "10": {
+       "player": "Zlatan Ibrahimović",
+       "goals": 48,
+       "country": "Sweden"
+     }
+   }
+}
