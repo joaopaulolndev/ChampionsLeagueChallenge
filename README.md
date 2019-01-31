@@ -38,6 +38,7 @@ Every parameter must be considered as a string.
   <img src="https://img.shields.io/badge/size-465.%20kB-green.svg" alt="">
   <img src="https://img.shields.io/badge/license-MIT-000.svg" alt="">
   <img src="https://img.shields.io/badge/platform-windows%20%7C%20macos%20%7C%20linux-lightgrey.svg" alt="">
+  <img src="https://img.shields.io/badge/Sanic%20Framework-18.12-red.svg" alt="">
 </p>
 
 ## Run
