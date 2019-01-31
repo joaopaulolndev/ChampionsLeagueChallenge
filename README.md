@@ -8,10 +8,10 @@ Challenge using Sanic Framework base in Python 3 with Champions League datasets
 
 # Recursos:
 
-/api/champions-league/
-Breve descrição sobre Liga dos Campeões
-Maiores campeões (top 5)
-Melhores marcadores de sempre (top 10)
+- <b>/api/champions-league/</b>
+<br />Breve descrição sobre Liga dos Campeões
+<br />Maiores campeões (top 5)
+<br />Melhores marcadores de sempre (top 10)
 
 
 /api/champions-league/<season>/
