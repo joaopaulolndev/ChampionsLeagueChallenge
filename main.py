@@ -105,7 +105,7 @@ async def quarterFinalsTeamVsTeam(request, season, team1, team2):
 
     return json(ret)
 
-# 10. Route semi-finals
+# 10. Route semi-finals 
 @app.route(PATH_API + "/champions-league/<season>/semi-finals/<team1>/vs/<team2>", methods=['GET'])
 async def semiFinalsTeamVsTeam(request, season, team1, team2):
     try:
