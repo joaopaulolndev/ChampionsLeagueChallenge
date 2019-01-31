@@ -31,7 +31,7 @@ Every parameter must be considered as a string.
 
 ## Requirements:
    * Python >= 3.5+
-   * Sanic 18.12
+   * Sanic Framework 18.12
     
 <p align="center">
   <img alt="" src="https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue.svg">
