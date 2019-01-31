@@ -1,15 +1,19 @@
 # ChampionsLeagueChallenge
 Challenge using Sanic Framework base in Python 3 with Champions League datasets
 
-Champions League REST API
+## Champions League REST API
 
-Para realização deste trabalho tenha como referência a temporada 2017-2018 da Champions League. Recomenda-se a utilização do framework Sanic ou Django REST para o desenvolvimento desta API, assim como a ferramenta Postman para a criação das requisições HTTP. Devem utilizar o Git como ferramenta da controlo de versão. 
-Todos os recursos disponibilizados devem utilizar JSON, seja para receber ou entregar dados. As rotas podem receber um <parâmetro>. Todo parâmetro deve ser considerado como string.
-Recursos:
+##### Para realização deste trabalho tenha como referência a temporada 2017-2018 da Champions League. Recomenda-se a utilização do framework Sanic ou Django REST para o desenvolvimento desta API, assim como a ferramenta Postman para a criação das requisições HTTP. Devem utilizar o Git como ferramenta da controlo de versão. 
+##### Todos os recursos disponibilizados devem utilizar JSON, seja para receber ou entregar dados. As rotas podem receber um <parâmetro>. Todo parâmetro deve ser considerado como string.
+
+# Recursos:
+
 /api/champions-league/
 Breve descrição sobre Liga dos Campeões
 Maiores campeões (top 5)
 Melhores marcadores de sempre (top 10)
+
+
 /api/champions-league/<season>/
 País que recebe a final
 Campeão
