@@ -41,7 +41,7 @@ Every parameter must be considered as a string.
   <img src="https://img.shields.io/badge/Sanic%20Framework-18.12-red.svg" alt="">
 </p>
 
-## Run:
+## Run Instructions:
     Run this code > python3 main.py 
     Open the Browser http://0.0.0.0:8000
        
