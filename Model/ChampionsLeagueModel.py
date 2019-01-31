@@ -6,7 +6,9 @@ import json
 import os.path
 
 
-# Model ChampionsLeagueModel
+"""
+" Model ChampionsLeagueModel
+"""
 class ChampionsLeagueModel:
 
     """
@@ -60,7 +62,7 @@ class ChampionsLeagueModel:
         return output[0]
 
     """
-    " metodo que recupera todos os grupos da temporada
+    " Metodo que recupera todos os grupos da temporada
     """
     def getGroups(season, group=None):
 
