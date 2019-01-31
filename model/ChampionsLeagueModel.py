@@ -6,7 +6,7 @@ import json
 import os.path
 
 """
-" Model ChampionsLeagueModel
+" model ChampionsLeagueModel
 """
 class ChampionsLeagueModel:
 

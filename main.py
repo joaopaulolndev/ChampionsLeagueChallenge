@@ -1,6 +1,6 @@
 from sanic import Sanic
 from sanic.response import json, text
-from Model.ChampionsLeagueModel import ChampionsLeagueModel
+from model.ChampionsLeagueModel import ChampionsLeagueModel
 
 __author__ = "João Paulo Leite Nascimento"
 __date__ = "31 January 2019"
