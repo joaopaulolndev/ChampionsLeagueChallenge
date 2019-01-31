@@ -5,6 +5,7 @@
       "key": "brugge",
       "name": "Club Brugge",
       "code": null,
+      "titles": 0,
       "country": {
         "key": "be",
         "name": "Belgium"
@@ -14,6 +15,7 @@
       "key": "ludogorets",
       "name": "Ludogorets",
       "code": null,
+      "titles": 0,
       "country": {
         "key": "bg",
         "name": "Bulgaria"
@@ -23,6 +25,7 @@
       "key": "kobenhavn",
       "name": "København",
       "code": null,
+      "titles": 0,
       "country": {
         "key": "dk",
         "name": "Denmark"
@@ -32,6 +35,7 @@
       "key": "psv",
       "name": "PSV Eindhoven",
       "code": null,
+      "titles": 1,
       "country": {
         "key": "nl",
         "name": "Netherlands"
@@ -41,6 +45,7 @@
       "key": "porto",
       "name": "Porto",
       "code": null,
+      "titles": 2,
       "country": {
         "key": "pt",
         "name": "Portugal"
@@ -50,6 +55,7 @@
       "key": "benfica",
       "name": "Benfica",
       "code": null,
+      "titles": 2,
       "country": {
         "key": "pt",
         "name": "Portugal"
@@ -59,6 +65,7 @@
       "key": "sportinglisboa",
       "name": "Sporting Lisboa",
       "code": null,
+      "titles": 0,
       "country": {
         "key": "pt",
         "name": "Portugal"
@@ -68,13 +75,14 @@
       "key": "cskamoskva",
       "name": "CSKA Moskva",
       "code": null,
+      "titles": 0,
       "country": {
         "key": "ru",
         "name": "Russia"
       }
     },
     {
-      "key": "arsenaltula",
+      "key": "arsenal",
       "name": "Arsenal",
       "code": null,
       "country": {
@@ -86,6 +94,7 @@
       "key": "rostov",
       "name": "Rostov",
       "code": null,
+      "titles": 0,
       "country": {
         "key": "ru",
         "name": "Russia"
@@ -95,6 +104,7 @@
       "key": "celtic",
       "name": "Celtic",
       "code": "CEL",
+      "titles": 0,
       "country": {
         "key": "sco",
         "name": "Scotland"
@@ -104,6 +114,7 @@
       "key": "besiktas",
       "name": "Beşiktaş JK",
       "code": null,
+      "titles": 0,
       "country": {
         "key": "tr",
         "name": "Turkey"
@@ -113,6 +124,7 @@
       "key": "kiew",
       "name": "Dynamo Kiew",
       "code": null,
+      "titles": 0,
       "country": {
         "key": "ua",
         "name": "Ukraine"
@@ -122,6 +134,7 @@
       "key": "legiawarszawa",
       "name": "Legia",
       "code": null,
+      "titles": 0,
       "country": {
         "key": "pl",
         "name": "Poland"
@@ -131,6 +144,7 @@
       "key": "zagreb",
       "name": "Dinamo Zagreb",
       "code": null,
+      "titles": 0,
       "country": {
         "key": "hr",
         "name": "Croatia"
@@ -140,6 +154,7 @@
       "key": "barcelona",
       "name": "Barcelona",
       "code": null,
+      "titles": 5,
       "country": {
         "key": "es",
         "name": "spain"
@@ -149,6 +164,7 @@
       "key": "bayern",
       "name": "FC Bayern München",
       "code": "FCB",
+      "titles": 5,
       "country": {
         "key": "de",
         "name": "Germany"
@@ -158,6 +174,7 @@
       "key": "dortmund",
       "name": "Borussia Dortmund",
       "code": "BVB",
+      "titles": 1,
       "country": {
         "key": "de",
         "name": "Germany"
@@ -167,6 +184,7 @@
       "key": "leverkusen",
       "name": "Bayer 04 Leverkusen",
       "code": "B04",
+      "titles": 0,
       "country": {
         "key": "de",
         "name": "Germany"
@@ -176,6 +194,7 @@
       "key": "mgladbach",
       "name": "Borussia M'gladbach",
       "code": "BMG",
+      "titles": 0,
       "country": {
         "key": "de",
         "name": "Germany"
@@ -185,6 +204,7 @@
       "key": "tottenham",
       "name": "Tottenham Hotspur",
       "code": "TOT",
+      "titles": 0,
       "country": {
         "key": "eng",
         "name": "England"
@@ -194,6 +214,7 @@
       "key": "mancity",
       "name": "Manchester City",
       "code": "MCI",
+      "titles": 0,
       "country": {
         "key": "eng",
         "name": "England"
@@ -203,6 +224,7 @@
       "key": "leicester",
       "name": "Leicester City",
       "code": "LEI",
+      "titles": 0,
       "country": {
         "key": "eng",
         "name": "England"
@@ -212,6 +234,7 @@
       "key": "madrid",
       "name": "R. Madrid",
       "code": "RMD",
+      "titles": 13,
       "country": {
         "key": "es",
         "name": "Spain"
@@ -221,6 +244,7 @@
       "key": "atletico",
       "name": "Atlético",
       "code": "ATL",
+      "titles": 0,
       "country": {
         "key": "es",
         "name": "Spain"
@@ -230,6 +254,7 @@
       "key": "sevilla",
       "name": "Sevilla",
       "code": "SEV",
+      "titles": 0,
       "country": {
         "key": "es",
         "name": "Spain"
@@ -239,6 +264,7 @@
       "key": "juventus",
       "name": "Juventus",
       "code": "JUV",
+      "titles": 2,
       "country": {
         "key": "it",
         "name": "Italy"
@@ -248,6 +274,7 @@
       "key": "napoli",
       "name": "Napoli",
       "code": "NAP",
+      "titles": 0,
       "country": {
         "key": "it",
         "name": "Italy"
@@ -257,6 +284,7 @@
       "key": "paris",
       "name": "Paris SG",
       "code": "PSG",
+      "titles": 0,
       "country": {
         "key": "fr",
         "name": "France"
@@ -266,6 +294,7 @@
       "key": "lyon",
       "name": "Lyon",
       "code": "OL",
+      "titles": 0,
       "country": {
         "key": "fr",
         "name": "France"
@@ -275,6 +304,7 @@
       "key": "monaco",
       "name": "AS Monaco",
       "code": "ASM",
+      "titles": 0,
       "country": {
         "key": "mc",
         "name": "Monaco"
@@ -284,6 +314,7 @@
       "key": "basel",
       "name": "FC Basel 1893",
       "code": "BAS",
+      "titles": 0,
       "country": {
         "key": "ch",
         "name": "Switzerland"
