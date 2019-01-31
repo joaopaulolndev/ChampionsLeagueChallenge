@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="https://github.com/joaopaulolndev/">
-    <img alt="" src="http://www.gazetaam.com/wp-content/uploads/2016/03/Champions-Leaguee.jpg">
+    <img alt="" src="https://nssdata.s3.amazonaws.com/images/galleries/16702/uefa-champions-league-rebranding-2018-2021-7.jpg">
   </a>
 </p>
 
