@@ -30,8 +30,8 @@ Every parameter must be considered as a string.
 </p>
 
 ## Requirements:
-    * Python >= 3.5+
-    * Sanic 18.12
+   * Python >= 3.5+
+   * Sanic 18.12
     
 <p align="center">
   <img alt="" src="https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue.svg">
