@@ -9,14 +9,18 @@ import os.path
 # Model ChampionsLeagueModel
 class ChampionsLeagueModel:
 
-    # about: description, top 5 champions, top 5 scorer,
+    """
+    " Metodo com descricao sobre a liga dos campeões, maiores vencedores e maiores artilheiros
+    """
     def getAbout():
 
         json_data = open('data/champions-league.json').read()
         data = json.loads(json_data)
         return data
 
-    # country receive the final, champion and vice
+    """
+    " Metodo retorno o pais que recebeu a final, o time campeão e o vice
+    """
     def getAboutBySeason(season):
 
         json_data = open('data/finals.json').read()
@@ -29,7 +33,9 @@ class ChampionsLeagueModel:
 
         return ret
 
-    # get all teams in the season
+    """
+    " Metodo que recupera todos os times da temporada com as suas informacoes
+    """
     def getAllTeams(season):
 
         if not os.path.isdir("data/" + season):
@@ -38,7 +44,9 @@ class ChampionsLeagueModel:
         json_data = open('data/' + season + '/cl.clubs.json').read()
         return json.loads(json_data)
 
-    # get one team
+    """
+    " Metodo que recupera somente um pais com a quantidade de titulos, país de origem
+    """
     def getOneTeam(season, name):
 
         if not os.path.isdir("data/" + season):
@@ -51,7 +59,9 @@ class ChampionsLeagueModel:
 
         return output[0]
 
-    # get groups
+    """
+    " metodo que recupera todos os grupos da temporada
+    """
     def getGroups(season, group=None):
 
         if not os.path.isdir("data/" + season):
@@ -70,7 +80,9 @@ class ChampionsLeagueModel:
 
         return result
 
-    # get round of 16 list
+    """
+    " Metodo para classificar as partidas das oitavas de final
+    """
     def getRound16(season):
 
         if not os.path.isdir("data/" + season):
@@ -87,8 +99,10 @@ class ChampionsLeagueModel:
 
         return games
 
-    # get time vs time
-    def getRound16TeamVsTeam(season, team1, team2):
+    """
+    " Metodo para criacao dos playoffs das oitavas de final as semi finais
+    """
+    def getPlayoffs(season, team1, team2, step):
 
         if not os.path.isdir("data/" + season):
             raise Exception('Season not found')
@@ -96,37 +110,20 @@ class ChampionsLeagueModel:
         json_data = open('data/' + season + '/cl.json').read()
         data = json.loads(json_data)
 
-        game = ChampionsLeagueModel.mountGamePlayoffs(data, team1, team2, 6, 7)
+        if step == 'round-of-16':
+            round1, round2 = 6, 7
+        elif step == 'quarter-finals':
+            round1, round2 = 8, 9
+        elif step == 'semi-finals':
+            round1, round2 = 10, 11
+
+        game = ChampionsLeagueModel.mountGamePlayoffs(data, team1, team2, round1, round2)
 
         return game
 
-    # get quarter of finals
-    def getQuarterFinalsTeamVsTeam(season, team1, team2):
-
-        if not os.path.isdir("data/" + season):
-            raise Exception('Season not found')
-
-        json_data = open('data/' + season + '/cl.json').read()
-        data = json.loads(json_data)
-
-        game = ChampionsLeagueModel.mountGamePlayoffs(data, team1, team2, 8, 9)
-
-        return game
-
-    # get quarter of finals
-    def getSemiFinalsTeamVsTeam(season, team1, team2):
-
-        if not os.path.isdir("data/" + season):
-            raise Exception('Season not found')
-
-        json_data = open('data/' + season + '/cl.json').read()
-        data = json.loads(json_data)
-
-        game = ChampionsLeagueModel.mountGamePlayoffs(data, team1, team2, 10, 11)
-
-        return game
-
-    # mount game playoffs
+    """
+    " Metodo que monta os jogos dos playoffs com o resultado de cada jogo ida e volta
+    """
     def mountGamePlayoffs(data, team1, team2, round1, round2):
         matches1 = data['rounds'][round1]['matches']
 
@@ -155,7 +152,9 @@ class ChampionsLeagueModel:
 
         return game
 
-    # verifid the games
+    """
+    " Metodo para procurar se os times informados nas partidas
+    """
     def findTeamsInMatches(matches, t1, t2):
 
         match_found = dict()
@@ -173,7 +172,9 @@ class ChampionsLeagueModel:
 
         return match_found
 
-    # get final
+    """
+    " Metodo que recupera as informacoes da final
+    """
     def getFinal(season, time1, time2):
 
         if not os.path.isdir("data/" + season):
