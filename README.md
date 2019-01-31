@@ -29,6 +29,16 @@ Routes can receive a <parameter>.
 Every parameter must be considered as a string.
 </p>
 
+<p align="center">
+  <img alt="" src="https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue.svg">
+  <img src="https://img.shields.io/badge/size-465.%20kB-green.svg" alt="">
+  <img src="https://img.shields.io/badge/license-MIT-000.svg" alt="">
+  <img src="https://img.shields.io/badge/platform-windows%20%7C%20macos%20%7C%20linux-lightgrey.svg" alt="">
+  
+  
+</p>
+
+
 ## Requirements
     * Python >= 3.5+
     * Sanic 18.12
@@ -133,5 +143,9 @@ Every parameter must be considered as a string.
     
 ## References:
 
+   - [Sanic Framework Documentation](https://sanic.readthedocs.io/en/latest/index.html)
    - [UEFA Champions League Wikipedia](https://en.wikipedia.org/wiki/UEFA_Champions_League)
+   - [2017–18 UEFA Champions League](https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League)
+   - [2016–17 UEFA Champions League](https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League)
    - [Open Football](https://github.com/openfootball/football.json)
+
