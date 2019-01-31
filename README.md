@@ -36,20 +36,24 @@ Challenge using Sanic Framework base in Python 3 with Champions League datasets
 -<b>7. /api/champions-league/:season/round-of-16/</b> 
 <br /> Lista do chaveamento [Equipa 1 vs Equipa 2, ..., Equipa 15 vs Equipa 16]
 <br />  
+-<b>8. /api/champions-league/<season>/round-of-16/:team1/vs/:team2/</b>  
+<br/>Deve mostrar o resultado da partida entre Equipa 1 vs Equipa 2. 
+<br/>Equipa 1 deve ser considerada como a equipa que joga em casa.
+<br />
+-<b>9. /api/champions-league/:season/quarter-finals/:team1/vs/:team2/</b>  
+<br />Deve mostrar o resultado da partida entre Equipa 1 vs Equipa 2. 
+<br />Equipa 1 deve ser considerada como a equipa que joga em casa.
+<br />
+-<b>10. /api/champions-league/:season/semi-finals/:team1/vs/:team2/</b>  
+<br />Deve mostrar o resultado da partida entre Equipa 1 vs Equipa 2. 
+<br />Equipa 1 deve ser considerada como a equipa que joga em casa.
+<br />
+-<b>11. /api/champions-league/:season/final/:team1/vs/:team/</b>  
+<br />Deve mostrar o resultado da partida entre Equipa 1 vs Equipa 2. 
+<br />Deve mostrar o campeão
+<br />Deve mostrar o vice-campeão
+  
 
 
 
 
-/api/champions-league/<season>/round-of-16/<team1>/vs/<team2>/
-Deve mostrar o resultado da partida entre Equipa 1 vs Equipa 2. 
-Equipa 1 deve ser considerada como a equipa que joga em casa.
-/api/champions-league/<season>/quarter-finals/<team1>/vs/<team2>/
-Deve mostrar o resultado da partida entre Equipa 1 vs Equipa 2. 
-Equipa 1 deve ser considerada como a equipa que joga em casa.
-/api/champions-league/<season>/semi-finals/<team1>/vs/<team2>/
-Deve mostrar o resultado da partida entre Equipa 1 vs Equipa 2. 
-Equipa 1 deve ser considerada como a equipa que joga em casa.
-/api/champions-league/<season>/final/<team1>/vs/<team2>/
-Deve mostrar o resultado da partida entre Equipa 1 vs Equipa 2. 
-Deve mostrar o campeão
-Deve mostrar o vice-campeão
