@@ -6,7 +6,7 @@ verify_ssl = false
 
 [packages]
 
-Sanic = "18.12"
+Sanic = "*"
 
 [requires]
 
