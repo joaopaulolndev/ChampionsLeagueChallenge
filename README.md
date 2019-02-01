@@ -68,9 +68,16 @@ conda search sanic --channel conda-forge
 ```
     
 ## Run Instructions:
-    Run this code > python3 main.py 
+    Run this code local > python3 main.py 
     Open the Browser http://0.0.0.0:8000
        
+
+## Build:
+
+   Pode visualizar a aplicação nesse endereço. <br/>
+   You can view the application at this address.
+
+   [https://champions-league-challenge.herokuapp.com/api/champions-league/](https://champions-league-challenge.herokuapp.com/api/champions-league/)
 
 ## Resources:
 
@@ -83,6 +90,8 @@ conda search sanic --channel conda-forge
     + Top Champions (top 5)
     + Best scorer (top 10)
     
+      Example: [https://champions-league-challenge.herokuapp.com/api/champions-league](https://champions-league-challenge.herokuapp.com/api/champions-league)
+    
 * 2 /api/champions-league/&lt;season&gt;/
     + País que recebe a final
     + Campeão
@@ -92,10 +101,14 @@ conda search sanic --channel conda-forge
     + Champion
     + Runners-up
     
+      Example: [https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18](https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18)
+    
 * 3 /api/champions-league/&lt;season&gt;/teams/
     + Lista com todas as equipas da temporada em questão, assim como os seus respectivos nomes e países
     <br /><br /> 
     + List with all the teams of the season in question, as well as their respective names and countries
+    
+      Example: [https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/teams/](https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/teams/)
 
 * 4 /api/champions-league/&lt;season&gt;/teams/&lt;name&gt;/
     + Nome
@@ -105,6 +118,8 @@ conda search sanic --channel conda-forge
     + Name
     + Country
     + Number of Champions League Titles
+    
+      Example: [https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/teams/madrid](https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/teams/madrid)
   
  * 5 /api/champions-league/&lt;season&gt;/group-stage/   
     + Lista dos grupos da temporada em questão com suas respectivas equipas
@@ -113,22 +128,31 @@ conda search sanic --channel conda-forge
     + List of groups of the season in question with their respective teams
     + Consider only the final classification of groups
     
+      Example: [https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/group-stage](https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/group-stage)
+    
 * 6 /api/champions-league/&lt;season&gt;/group-stage/&lt;name&gt;/
     + Considerar apenas a classificação final do grupo em questão
     <br/><br/>
     + Consider only the final classification of the group in question
     
+      Example: [https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/group-stage/A/](https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/group-stage/A)
+
+    
 * 7 /api/champions-league/&lt;season&gt;/round-of-16/      
     + Lista do chaveamento [Equipa 1 vs Equipa 2, ..., Equipa 15 vs Equipa 16]
     <br/><br/>
-    + Match lists [Team 1 vs Team 2, ..., Team 15 vs Team 16]  
+    + Match lists [Team 1 vs Team 2, ..., Team 15 vs Team 16]
+    
+      Example : [https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/round-of-16](https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/round-of-16) 
     
 * 8 /api/champions-league/&lt;season&gt;/round-of-16/&lt;team1&gt;/vs/&lt;team2&gt;/ 
     +  Deve mostrar o resultado da partida entre Equipa 1 vs Equipa 2.
     +  Equipa 1 deve ser considerada como a equipa que joga em casa.
     <br/></br>
     + Should be the result of the match between Team 1 vs Team 2.
-    + Team 1 should be considered as the team that plays at home. 
+    + Team 1 should be considered as the team that plays at home.
+    
+      Example: [https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/round-of-16/juventus/vs/tottenham](https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/round-of-16/juventus/vs/tottenham)
      
 * 9 /api/champions-league/&lt;season&gt;/quarter-finals/&lt;team1&gt;/vs/&lt;team2&gt;/  
     + Deve mostrar o resultado da partida entre Equipa 1 vs Equipa 2.
@@ -137,12 +161,16 @@ conda search sanic --channel conda-forge
     + Should be the result of the match between Team 1 vs Team 2.
     + Team 1 should be considered as the team that plays at home.
     
+      Example: [https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/quarter-finals/barcelona/vs/roma](https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/quarter-finals/barcelona/vs/roma)
+    
 * 10 /api/champions-league/&lt;season&gt;/semi-finals/&lt;team1&gt;/vs/&lt;team2&gt;/
     + Deve mostrar o resultado da partida entre Equipa 1 vs Equipa 2.
     + Equipa 1 deve ser considerada como a equipa que joga em casa.
     <br/><br/>
     + Should be the result of the match between Team 1 vs Team 2.
     + Team 1 should be considered as the team that plays at home.  
+    
+      Example: [https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/semi-finals/liverpool/vs/roma](https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/semi-finals/liverpool/vs/roma)
 
 * 11 /api/champions-league/&lt;team1&gt;/final/&lt;team1&gt;/vs/&lt;team2&gt;/
     + Deve mostrar o resultado da partida entre Equipa 1 vs Equipa 2.
@@ -152,6 +180,8 @@ conda search sanic --channel conda-forge
     + Should be the result of the match between Team 1 vs Team 2.
     + Show the Champion
     + Show the Runner-up
+    
+      Example: [https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/final/madrid/vs/liverpool](https://champions-league-challenge.herokuapp.com/api/champions-league/2017-18/final/madrid/vs/liverpool)
   
 ## Parameters:
    >Segue a documentação sobre utilização dos parametros das requisições
