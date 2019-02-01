@@ -9,23 +9,23 @@
 
 ## About Champions League REST API Challenge:
 
-<p>Desafio Champions league, using Python 3 and Sanic Framework.</p>
-<p>Champions League Challenge, using Python 3 and Sanic Framework.</p>
+<p>Desafio Champions league, using <b>Python 3</b> and <b>Sanic Framework</b>.</p>
+<p>Champions League Challenge, using <b>Python 3</b> and <b>Sanic Framework</b>.</p>
 
-<p>Para realização deste trabalho tenha como referência a temporada 2017-2018 da Champions League. 
-Recomenda-se a utilização do framework Sanic ou Django REST para o desenvolvimento desta API, assim como a ferramenta Postman para a criação das requisições HTTP. 
-Devem utilizar o Git como ferramenta da controlo de versão.</p> 
+<p>Para realização deste trabalho tenha como referência a temporada <b>2017-2018 da Champions League</b>. 
+Recomenda-se a utilização do framework <b>Sanic</b> ou <b>Django REST</b> para o desenvolvimento desta API, assim como a ferramenta <b>Postman</b> para a criação das requisições HTTP. 
+Devem utilizar o <b>Git</b> como ferramenta da controlo de versão.</p> 
 
-<p>For the accomplishment of this work reference has been made to the 2017-2018 season of the Champions League.
-It is recommended to use the Sanic or Django REST framework for the development of this API, as well as the Postman tool for the creation of HTTP requests.
-They should use Git as a version control tool.</p>
+<p>For the accomplishment of this work reference has been made to the <b>2017-2018 season of the Champions League</b>.
+It is recommended to use the <b>Sanic</b> or <b>Django REST</b> framework for the development of this API, as well as the <b>Postman</b> tool for the creation of HTTP requests.
+They should use <b>Git</b> as a version control tool.</p>
 
-<p>Todos os recursos disponibilizados devem utilizar JSON, seja para receber ou entregar dados. 
-As rotas podem receber um <parâmetro>. 
+<p>Todos os recursos disponibilizados devem utilizar <b>JSON</b>, seja para receber ou entregar dados. 
+As rotas podem receber um &lt;parâmetro&gt;. 
 Todo parâmetro deve ser considerado como string.</p>
 
-<p> All available resources must use JSON, either to receive or deliver data.
-Routes can receive a <parameter>.
+<p> All available resources must use <b>JSON</b>, either to receive or deliver data.
+Routes can receive a &lt;parameter&gt;.
 Every parameter must be considered as a string.
 </p>
 
@@ -157,7 +157,7 @@ conda search sanic --channel conda-forge
    >Segue a documentação sobre utilização dos parametros das requisições
    <br/> Follow the documentation about use parameters of requisitions
    
-   * &lt;season&gt; : 2016-17, 2017-28...
+   * &lt;season&gt; : 2016-17, 2017-18...
    * group-stage/&lt;season&gt;/ : A, B, C, D, E, F, G, H
    * &lt;team1&gt; and &lt;team2&gt; : use somente a key do time / use only the team key : <br/>
    anderlecht, feyenoord, porto, benfica, sportinglisboa, cskamoskva, spartak, celtic,
