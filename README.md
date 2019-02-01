@@ -41,8 +41,7 @@ Every parameter must be considered as a string.
   <img src="https://img.shields.io/badge/platform-linux--64%20%7C%20win--32%20%7C%20osx--64%20%7C%20win--64-lightgrey.svg" alt="">
 </p>
    
-Installing Sanic Framework
-================
+## Installing Sanic Framework
 
 Installing `sanic` from the `pip`
 
