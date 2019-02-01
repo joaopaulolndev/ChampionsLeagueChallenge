@@ -164,6 +164,12 @@ conda search sanic --channel conda-forge
    besiktas, donezk, maribor, qarabag, olympiacos, apoel, barcelona, liverpool, bayern,
    dortmund, leipzig, chelsea, tottenham, manutd, mancity, madrid, atletico, sevilla,
    roma, juventus, napoli, paris, monaco, basel
+   
+## Patterns 
+Utilizado para boas práticas de programação em Python o 
+[PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) como referência.
+
+Used for good programming practice in Python the [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) as a reference.   
     
 ## References:
 
