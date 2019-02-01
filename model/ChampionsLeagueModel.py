@@ -147,7 +147,7 @@ class ChampionsLeagueModel:
     """
 
     @classmethod
-    def mount_game_playoffs(cls, data, team1, team2, round1, round2):
+    def mount_game_playoffs(cls, data, team1, team2, round1, round2 = ''):
 
         matches1 = data['rounds'][round1]['matches']
 
@@ -233,21 +233,11 @@ class ChampionsLeagueModel:
         # recupera a validacao dos times
         cls.raise_error_if_team_not_found_final(matches, time1, time2)
 
-        # atribui os escores de cada time
-        score1 = matches['score1']
-        score2 = matches['score2']
-
-        # cria a resposta para retorno do json com o jogo e o placar
-        game = dict()
-        game['Match'] = str(matches['team1']['name']) + ' ' + str(score1) + " vs " + str(score2) + ' ' + str(
-            matches['team2']['name'])
-
-        # verifica se houve gols na partida
-        if 'goals1' in matches or 'goals2' in matches:
-            game['Goals'] = cls.goals_of_match(matches)
+        # recupera o resultado do jogo final
+        game = cls.mount_game_playoffs(data, time1, time2, round1=12)
 
         # recupera os dados sobre a fina; da temporada
-        finals = ChampionsLeagueModel.get_about_by_season(season)
+        finals = cls.get_about_by_season(season)
 
         # adiciona campeão e vice aos dados de retorno
         game['Champion'] = finals['champion']

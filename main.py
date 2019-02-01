@@ -20,6 +20,14 @@ PATH_API = '/api'
 async def home(request):
     return text('API REST CHAMPIONS LEAGUE')
 
+"""
+" API home
+"""
+
+
+@app.route(PATH_API, methods=['GET'])
+async def home(request):
+    return text('API REST CHAMPIONS LEAGUE')
 
 """
 " 1. Route about
