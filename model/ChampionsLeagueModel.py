@@ -15,29 +15,27 @@ class ChampionsLeagueModel:
     " Metodo com descricao sobre a liga dos campeões, maiores vencedores e maiores artilheiros
     """
 
-    @staticmethod
-    def get_about():
+    @classmethod
+    def get_about(cls):
 
-        json_data = open('data/champions-league.json').read()
-        data = json.loads(json_data)
-        return data
+        # recupera os dados do dataset e retorna
+        return cls.read_json_file('champions-league.json')
 
     """
     " Metodo retorno o pais que recebeu a final, o time campeão e o vice
     """
 
-    @staticmethod
-    def get_about_by_season(season):
+    @classmethod
+    def get_about_by_season(cls, season):
 
-        json_data = open('data/finals.json').read()
-        data = json.loads(json_data)
+        # recupera os dados do dataset
+        data = cls.read_json_file('finals.json')
 
-        if season in data['finals']:
-            ret = data['finals'][season]
-        else:
-            raise Exception('Season not found')
+        # verifica se tem a final informada
+        if season is not data['finals']:
+            cls.raise_error_if_season_not_found(season)
 
-        return ret
+        return data['finals'][season]
 
     """
     " Metodo que recupera todos os times da temporada com as suas informacoes
@@ -46,11 +44,11 @@ class ChampionsLeagueModel:
     @classmethod
     def get_all_teams(cls, season):
 
+        # valida se a temporada informada existe
         cls.raise_error_if_season_not_found(season)
 
-        # recupera os dados do dataset
-        json_data = open('data/' + season + '/cl.clubs.json').read()
-        return json.loads(json_data)
+        # recupera os dados do dataset e retorn
+        return cls.read_json_file(season + '/cl.clubs.json')
 
     """
     " Metodo que recupera somente um pais com a quantidade de titulos, país de origem
@@ -59,11 +57,11 @@ class ChampionsLeagueModel:
     @classmethod
     def get_one_team(cls, season, name):
 
+        # valida se a temporada informada existe
         cls.raise_error_if_season_not_found(season)
 
         # recupera os dados do dataset
-        json_data = open('data/' + season + '/cl.clubs.json').read()
-        data = json.loads(json_data)
+        data = cls.read_json_file(season + '/cl.clubs.json')
 
         # executa o filter com lambda somente para recuperar o nó que está o time pesquisado
         output = list(filter(lambda x: x['key'].lower() == name.lower(), data['clubs']))
@@ -77,11 +75,11 @@ class ChampionsLeagueModel:
     @classmethod
     def get_groups(cls, season, group=None):
 
+        # valida se a temporada informada existe
         cls.raise_error_if_season_not_found(season)
 
         # recupera os dados do dataset
-        json_data = open('data/' + season + '/cl.groups.json').read()
-        data = json.loads(json_data)
+        data = cls.read_json_file(season + '/cl.groups.json')
 
         # faz um loop para montar o chaveamento dos grupos
         result = dict()
@@ -102,11 +100,11 @@ class ChampionsLeagueModel:
     @classmethod
     def get_round_16(cls, season):
 
+        # valida se a temporada informada existe
         cls.raise_error_if_season_not_found(season)
 
         # recupera os dados do dataset
-        json_data = open('data/' + season + '/cl.json').read()
-        data = json.loads(json_data)
+        data = cls.read_json_file(season + '/cl.json')
 
         # recupera somente os jogos das oitavas de final
         matches = data['rounds'][6]['matches']
@@ -119,17 +117,17 @@ class ChampionsLeagueModel:
         return games
 
     """
-    " Metodo para criacao dos playoffs das oitavas de final as semi finais
+    " Metodo para criação dos playoffs das oitavas de final as semi finais
     """
 
     @classmethod
     def get_playoffs(cls, season, team1, team2, step):
 
+        # valida se a temporada informada existe
         cls.raise_error_if_season_not_found(season)
 
         # recupera os dados do dataset
-        json_data = open('data/' + season + '/cl.json').read()
-        data = json.loads(json_data)
+        data = cls.read_json_file(season + '/cl.json')
 
         # verifica qual é a fase ao qual está sendo feita a consulta para recuperar os rounds
         if step == 'round-of-16':
@@ -150,6 +148,7 @@ class ChampionsLeagueModel:
 
     @classmethod
     def mount_game_playoffs(cls, data, team1, team2, round1, round2):
+
         matches1 = data['rounds'][round1]['matches']
 
         # recupera os dados do primeiro round da fase
@@ -178,8 +177,13 @@ class ChampionsLeagueModel:
 
         # cria a resposta para retorno do json com o jogo e o placar
         game = dict()
+        game['Date'] = result['date']
         game['Match'] = str(result['team1']['name']) + ' ' + str(score1) + ' vs ' + str(score2) + ' ' + str(
             result['team2']['name'])
+
+        # verifica se houve gols na partida
+        if 'goals1' in result or 'goals2' in result:
+            game['Goals'] = cls.goals_of_match(result)
 
         return game
 
@@ -217,20 +221,17 @@ class ChampionsLeagueModel:
     @classmethod
     def get_final(cls, season, time1, time2):
 
+        # valida se a temporada informada existe
         cls.raise_error_if_season_not_found(season)
 
         # recupera os dados do dataset
-        json_data = open('data/' + season + '/cl.json').read()
-        data = json.loads(json_data)
+        data = cls.read_json_file(season + '/cl.json')
 
         # recupera somente a partida final
         matches = data['rounds'][12]['matches'][0]
 
-        # verifica se o time 1 e time 2 informados estao corretos
-        if matches['team1']['key'] != time1.lower():
-            cls.raise_error_if_team_not_found(1, team=time1)
-        if matches['team2']['key'] != time2.lower():
-            cls.raise_error_if_team_not_found(2, team=time2)
+        # recupera a validacao dos times
+        cls.raise_error_if_team_not_found_final(matches, time1, time2)
 
         # atribui os escores de cada time
         score1 = matches['score1']
@@ -241,13 +242,41 @@ class ChampionsLeagueModel:
         game['Match'] = str(matches['team1']['name']) + ' ' + str(score1) + " vs " + str(score2) + ' ' + str(
             matches['team2']['name'])
 
+        # verifica se houve gols na partida
+        if 'goals1' in matches or 'goals2' in matches:
+            game['Goals'] = cls.goals_of_match(matches)
+
         # recupera os dados sobre a fina; da temporada
         finals = ChampionsLeagueModel.get_about_by_season(season)
+
         # adiciona campeão e vice aos dados de retorno
         game['Champion'] = finals['champion']
         game['Runner-up'] = finals['runner-up']
 
         return game
+
+    @staticmethod
+    def goals_of_match(result):
+
+        goals = dict()
+        goals[result['team1']['name']] = ''
+        for g in result['goals1']:
+            goals[result['team1']['name']] += g['name'] + '(' + str(g['minute']) + 'min), '
+
+        goals[result['team2']['name']] = ''
+        for g in result['goals2']:
+            goals[result['team2']['name']] += g['name'] + '(' + str(g['minute']) + 'min), '
+
+        return goals
+
+    """
+    " Metodo que gera recupera os dados json
+    """
+
+    @staticmethod
+    def read_json_file(file):
+        json_data = open('data/' + file).read()
+        return json.loads(json_data)
 
     """
     " Metodo que gera exceção de temporada não encontrada
@@ -272,4 +301,17 @@ class ChampionsLeagueModel:
 
     @staticmethod
     def raise_error_if_team_not_found(num, team):
-        raise Exception('Invalid Team ' + num + ' ' + team)
+        raise Exception('Invalid Team ' + str(num) + ' ' + str(team))
+
+    """
+    " Metodo que verifica se os times da final estao corretos
+    """
+
+    @classmethod
+    def raise_error_if_team_not_found_final(cls, matches, time1, time2):
+
+        # verifica se o time 1 e time 2 informados estao corretos
+        if matches['team1']['key'] != time1.lower():
+            cls.raise_error_if_team_not_found(1, team=time1)
+        if matches['team2']['key'] != time2.lower():
+            cls.raise_error_if_team_not_found(2, team=time2)
