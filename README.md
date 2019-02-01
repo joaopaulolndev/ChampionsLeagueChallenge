@@ -33,6 +33,14 @@ Every parameter must be considered as a string.
    * Python 3.6
    * Sanic Framework 18.12
    
+<p align="center">
+  <img alt="" src="https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue.svg">
+  <img src="https://img.shields.io/badge/size-465%20kB-green.svg" alt="">
+  <img src="https://img.shields.io/badge/license-MIT-000.svg" alt="">
+  <img src="https://img.shields.io/badge/Sanic%20Framework-18.12-red.svg" alt="">
+  <img src="https://img.shields.io/badge/platform-linux--64%20%7C%20win--32%20%7C%20osx--64%20%7C%20win--64-lightgrey.svg" alt="">
+</p>
+   
 Installing Sanic Framework
 ================
 
@@ -60,14 +68,6 @@ It is possible to list all of the versions of `sanic` available on your platform
 conda search sanic --channel conda-forge
 ```
     
-<p align="center">
-  <img alt="" src="https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue.svg">
-  <img src="https://img.shields.io/badge/size-465%20kB-green.svg" alt="">
-  <img src="https://img.shields.io/badge/license-MIT-000.svg" alt="">
-  <img src="https://img.shields.io/badge/platform-windows%20%7C%20macos%20%7C%20linux-lightgrey.svg" alt="">
-  <img src="https://img.shields.io/badge/Sanic%20Framework-18.12-red.svg" alt="">
-</p>
-
 ## Run Instructions:
     Run this code > python3 main.py 
     Open the Browser http://0.0.0.0:8000
@@ -169,6 +169,7 @@ conda search sanic --channel conda-forge
 ## References:
 
    - [Sanic Framework Documentation](https://sanic.readthedocs.io/en/latest/index.html)
+   - [Sanic Feedstock](https://github.com/conda-forge/sanic-feedstock)
    - [UEFA Champions League Wikipedia](https://en.wikipedia.org/wiki/UEFA_Champions_League)
    - [2017–18 UEFA Champions League](https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League)
    - [2016–17 UEFA Champions League](https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League)
