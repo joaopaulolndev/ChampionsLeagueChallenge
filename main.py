@@ -1,6 +1,6 @@
 from sanic import Sanic
 from sanic.response import json, text
-from model.ChampionsLeagueModel import ChampionsLeagueModel
+from service.ChampionsLeagueService import ChampionsLeagueService
 
 __author__ = "João Paulo Leite Nascimento"
 __date__ = "31 January 2019"
@@ -36,7 +36,7 @@ async def home(request):
 
 @app.route(PATH_API + "/champions-league/", methods=['GET'])
 async def about(request):
-    return json(ChampionsLeagueModel.get_about())
+    return json(ChampionsLeagueService.get_about())
 
 
 """
@@ -47,7 +47,7 @@ async def about(request):
 @app.route(PATH_API + "/champions-league/<season>", methods=['GET'])
 async def about_final(request, season):
     try:
-        ret = ChampionsLeagueModel.get_about_by_season(season)
+        ret = ChampionsLeagueService.get_about_by_season(season)
     except Exception as e:
         ret = {"error ": str(e)}
 
@@ -62,7 +62,7 @@ async def about_final(request, season):
 @app.route(PATH_API + "/champions-league/<season>/teams/", methods=['GET'])
 async def teams(request, season):
     try:
-        ret = ChampionsLeagueModel.get_all_teams(season)
+        ret = ChampionsLeagueService.get_all_teams(season)
     except Exception as e:
         ret = {"error ": str(e)}
 
@@ -77,7 +77,7 @@ async def teams(request, season):
 @app.route(PATH_API + "/champions-league/<season>/teams/<name>", methods=['GET'])
 async def team(request, season, name):
     try:
-        ret = ChampionsLeagueModel.get_one_team(season, name)
+        ret = ChampionsLeagueService.get_one_team(season, name)
     except Exception as e:
         ret = {"error ": str(e)}
 
@@ -92,7 +92,7 @@ async def team(request, season, name):
 @app.route(PATH_API + "/champions-league/<season>/group-stage/", methods=['GET'])
 async def groups(request, season):
     try:
-        ret = ChampionsLeagueModel.get_groups(season)
+        ret = ChampionsLeagueService.get_groups(season)
     except Exception as e:
         ret = {"error ": str(e)}
 
@@ -107,7 +107,7 @@ async def groups(request, season):
 @app.route(PATH_API + "/champions-league/<season>/group-stage/<name>", methods=['GET'])
 async def group(request, season, name):
     try:
-        ret = ChampionsLeagueModel.get_groups(season, name)
+        ret = ChampionsLeagueService.get_groups(season, name)
     except Exception as e:
         ret = {"error ": str(e)}
 
@@ -122,7 +122,7 @@ async def group(request, season, name):
 @app.route(PATH_API + "/champions-league/<season>/round-of-16/", methods=['GET'])
 async def round16(request, season):
     try:
-        ret = ChampionsLeagueModel.get_round_16(season)
+        ret = ChampionsLeagueService.get_round_16(season)
     except Exception as e:
         ret = {"error ": str(e)}
 
@@ -137,7 +137,7 @@ async def round16(request, season):
 @app.route(PATH_API + "/champions-league/<season>/round-of-16/<team1>/vs/<team2>", methods=['GET'])
 async def round_of_16_team_vs_team(request, season, team1, team2):
     try:
-        ret = ChampionsLeagueModel.get_playoffs(season, team1, team2, 'round-of-16')
+        ret = ChampionsLeagueService.get_playoffs(season, team1, team2, 'round-of-16')
     except Exception as e:
         ret = {"error ": str(e)}
 
@@ -152,7 +152,7 @@ async def round_of_16_team_vs_team(request, season, team1, team2):
 @app.route(PATH_API + "/champions-league/<season>/quarter-finals/<team1>/vs/<team2>", methods=['GET'])
 async def quarter_finals_team_vs_team(request, season, team1, team2):
     try:
-        ret = ChampionsLeagueModel.get_playoffs(season, team1, team2, 'quarter-finals')
+        ret = ChampionsLeagueService.get_playoffs(season, team1, team2, 'quarter-finals')
     except Exception as e:
         ret = {"error ": str(e)}
 
@@ -167,7 +167,7 @@ async def quarter_finals_team_vs_team(request, season, team1, team2):
 @app.route(PATH_API + "/champions-league/<season>/semi-finals/<team1>/vs/<team2>", methods=['GET'])
 async def semi_finals_team_vs_team(request, season, team1, team2):
     try:
-        ret = ChampionsLeagueModel.get_playoffs(season, team1, team2, 'semi-finals')
+        ret = ChampionsLeagueService.get_playoffs(season, team1, team2, 'semi-finals')
     except Exception as e:
         ret = {"error ": str(e)}
 
@@ -182,7 +182,7 @@ async def semi_finals_team_vs_team(request, season, team1, team2):
 @app.route(PATH_API + "/champions-league/<season>/final/<team1>/vs/<team2>", methods=['GET'])
 async def final(request, season, team1, team2):
     try:
-        ret = ChampionsLeagueModel.get_final(season, team1, team2)
+        ret = ChampionsLeagueService.get_final(season, team1, team2)
     except Exception as e:
         ret = {"error ": str(e)}
 
