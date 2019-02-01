@@ -3,7 +3,6 @@ __date__ = "31 January 2019"
 __email__ = "joaopauloln7@gmail.com"
 
 import json
-import os.path
 
 """
 " model ChampionsLeagueModel

@@ -2,12 +2,12 @@ __author__ = "João Paulo Leite Nascimento"
 __date__ = "31 January 2019"
 __email__ = "joaopauloln7@gmail.com"
 
-import json
 import os.path
 from model.ChampionsLeagueModel import ChampionsLeagueModel
+from service.ExceptionService import ExceptionService
 
 """
-" model ChampionsLeagueService
+" Service ChampionsLeagueService
 """
 
 
@@ -34,7 +34,7 @@ class ChampionsLeagueService:
 
         # verifica se tem a final informada
         if season is not data['finals']:
-            cls.raise_error_if_season_not_found(season)
+            ExceptionService.raise_error_if_season_not_found(season)
 
         return data['finals'][season]
 
@@ -46,7 +46,7 @@ class ChampionsLeagueService:
     def get_all_teams(cls, season):
 
         # valida se a temporada informada existe
-        cls.raise_error_if_season_not_found(season)
+        ExceptionService.raise_error_if_season_not_found(season)
 
         # recupera os dados da model
         return ChampionsLeagueModel.get_clubs_json(season)
@@ -59,7 +59,7 @@ class ChampionsLeagueService:
     def get_one_team(cls, season, name):
 
         # valida se a temporada informada existe
-        cls.raise_error_if_season_not_found(season)
+        ExceptionService.raise_error_if_season_not_found(season)
 
         # recupera os dados da model
         data = ChampionsLeagueModel.get_clubs_json(season)
@@ -69,7 +69,7 @@ class ChampionsLeagueService:
 
         # verifica se retornou em vazio
         if not output:
-            cls.raise_error_if_team_not_found(1, name)
+            ExceptionService.raise_error_if_team_not_found(1, name)
 
         return output[0]
 
@@ -81,7 +81,7 @@ class ChampionsLeagueService:
     def get_groups(cls, season, group=None):
 
         # valida se a temporada informada existe
-        cls.raise_error_if_season_not_found(season)
+        ExceptionService.raise_error_if_season_not_found(season)
 
         # recupera os dados da model
         data = ChampionsLeagueModel.get_groups_json(season)
@@ -106,7 +106,7 @@ class ChampionsLeagueService:
     def get_round_16(cls, season):
 
         # valida se a temporada informada existe
-        cls.raise_error_if_season_not_found(season)
+        ExceptionService.raise_error_if_season_not_found(season)
 
         # recupera os dados da model
         data = ChampionsLeagueModel.get_cl_json(season)
@@ -129,7 +129,7 @@ class ChampionsLeagueService:
     def get_playoffs(cls, season, team1, team2, step):
 
         # valida se a temporada informada existe
-        cls.raise_error_if_season_not_found(season)
+        ExceptionService.raise_error_if_season_not_found(season)
 
         # recupera os dados da model
         data = ChampionsLeagueModel.get_cl_json(season)
@@ -168,7 +168,7 @@ class ChampionsLeagueService:
 
             # verifica se a resposta esta com erro (nao encontrada a partida 2)
             if 'Error' in match2_result:
-                cls.raise_error_if_match_not_found()
+                ExceptionService.raise_error_if_match_not_found()
             # Encontrou no round 2
             else:
                 result = match2_result
@@ -227,7 +227,7 @@ class ChampionsLeagueService:
     def get_final(cls, season, time1, time2):
 
         # valida se a temporada informada existe
-        cls.raise_error_if_season_not_found(season)
+        ExceptionService.raise_error_if_season_not_found(season)
 
         # recupera os dados da model
         data = ChampionsLeagueModel.get_cl_json(season)
@@ -236,7 +236,7 @@ class ChampionsLeagueService:
         matches = data['rounds'][12]['matches'][0]
 
         # recupera a validacao dos times
-        cls.raise_error_if_team_not_found_final(matches, time1, time2)
+        ExceptionService.raise_error_if_team_not_found_final(matches, time1, time2)
 
         # recupera o resultado do jogo final
         game = cls.mount_game_playoffs(data, time1, time2, round1=12)
@@ -264,40 +264,3 @@ class ChampionsLeagueService:
 
         return goals
 
-    """
-    " Metodo que gera exceção de temporada não encontrada
-    """
-
-    @staticmethod
-    def raise_error_if_season_not_found(season):
-        if not os.path.isdir("data/" + season):
-            raise Exception('Season not found')
-
-    """
-    " Metodo que gera exceção de partida não encontrada
-    """
-
-    @staticmethod
-    def raise_error_if_match_not_found():
-        raise Exception('Match not found')
-
-    """
-    " Metodo que gera exceção do time nao encontrado
-    """
-
-    @staticmethod
-    def raise_error_if_team_not_found(num, team):
-        raise Exception('Invalid Team ' + str(num) + ' ' + str(team))
-
-    """
-    " Metodo que verifica se os times da final estao corretos
-    """
-
-    @classmethod
-    def raise_error_if_team_not_found_final(cls, matches, time1, time2):
-
-        # verifica se o time 1 e time 2 informados estao corretos
-        if matches['team1']['key'] != time1.lower():
-            cls.raise_error_if_team_not_found(1, team=time1)
-        if matches['team2']['key'] != time2.lower():
-            cls.raise_error_if_team_not_found(2, team=time2)
