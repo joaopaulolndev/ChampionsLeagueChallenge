@@ -32,6 +32,33 @@ Every parameter must be considered as a string.
 ## Requirements:
    * Python 3.6
    * Sanic Framework 18.12
+   
+Installing Sanic Framework
+================
+
+Installing `sanic` from the `pip`
+
+```
+pip3 install sanic
+```
+
+Installing `sanic` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+
+```
+conda config --add channels conda-forge
+```
+
+Once the `conda-forge` channel has been enabled, `sanic` can be installed with:
+
+```
+conda install sanic
+```
+
+It is possible to list all of the versions of `sanic` available on your platform with:
+
+```
+conda search sanic --channel conda-forge
+```
     
 <p align="center">
   <img alt="" src="https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue.svg">
