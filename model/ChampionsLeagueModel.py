@@ -8,12 +8,15 @@ import os.path
 """
 " model ChampionsLeagueModel
 """
-class ChampionsLeagueModel:
 
+
+class ChampionsLeagueModel:
     """
     " Metodo com descricao sobre a liga dos campeões, maiores vencedores e maiores artilheiros
     """
-    def getAbout(self):
+
+    @staticmethod
+    def get_about():
 
         json_data = open('data/champions-league.json').read()
         data = json.loads(json_data)
@@ -22,12 +25,14 @@ class ChampionsLeagueModel:
     """
     " Metodo retorno o pais que recebeu a final, o time campeão e o vice
     """
-    def getAboutBySeason(season):
+
+    @staticmethod
+    def get_about_by_season(season):
 
         json_data = open('data/finals.json').read()
         data = json.loads(json_data)
 
-        if (season in data['finals']):
+        if season in data['finals']:
             ret = data['finals'][season]
         else:
             raise Exception('Season not found')
@@ -37,10 +42,11 @@ class ChampionsLeagueModel:
     """
     " Metodo que recupera todos os times da temporada com as suas informacoes
     """
-    def getAllTeams(season):
 
-        if not os.path.isdir("data/" + season):
-            raise Exception('Season not found')
+    @classmethod
+    def get_all_teams(cls, season):
+
+        cls.raise_error_if_season_not_found(season)
 
         # recupera os dados do dataset
         json_data = open('data/' + season + '/cl.clubs.json').read()
@@ -49,10 +55,11 @@ class ChampionsLeagueModel:
     """
     " Metodo que recupera somente um pais com a quantidade de titulos, país de origem
     """
-    def getOneTeam(season, name):
 
-        if not os.path.isdir("data/" + season):
-            raise Exception('Season not found')
+    @classmethod
+    def get_one_team(cls, season, name):
+
+        cls.raise_error_if_season_not_found(season)
 
         # recupera os dados do dataset
         json_data = open('data/' + season + '/cl.clubs.json').read()
@@ -66,10 +73,11 @@ class ChampionsLeagueModel:
     """
     " Metodo que recupera todos os grupos da temporada
     """
-    def getGroups(season, group=None):
 
-        if not os.path.isdir("data/" + season):
-            raise Exception('Season not found')
+    @classmethod
+    def get_groups(cls, season, group=None):
+
+        cls.raise_error_if_season_not_found(season)
 
         # recupera os dados do dataset
         json_data = open('data/' + season + '/cl.groups.json').read()
@@ -90,10 +98,11 @@ class ChampionsLeagueModel:
     """
     " Metodo para classificar as partidas das oitavas de final
     """
-    def getRound16(season):
 
-        if not os.path.isdir("data/" + season):
-            raise Exception('Season not found')
+    @classmethod
+    def get_round_16(cls, season):
+
+        cls.raise_error_if_season_not_found(season)
 
         # recupera os dados do dataset
         json_data = open('data/' + season + '/cl.json').read()
@@ -112,10 +121,11 @@ class ChampionsLeagueModel:
     """
     " Metodo para criacao dos playoffs das oitavas de final as semi finais
     """
-    def getPlayoffs(season, team1, team2, step):
 
-        if not os.path.isdir("data/" + season):
-            raise Exception('Season not found')
+    @classmethod
+    def get_playoffs(cls, season, team1, team2, step):
+
+        cls.raise_error_if_season_not_found(season)
 
         # recupera os dados do dataset
         json_data = open('data/' + season + '/cl.json').read()
@@ -130,29 +140,31 @@ class ChampionsLeagueModel:
             round1, round2 = 10, 11
 
         # faz chamada ao metodo que monta as partidas
-        game = ChampionsLeagueModel.mountGamePlayoffs(data, team1, team2, round1, round2)
+        game = cls.mount_game_playoffs(data, team1, team2, round1, round2)
 
         return game
 
     """
     " Metodo que monta os jogos dos playoffs com o resultado de cada jogo ida e volta
     """
-    def mountGamePlayoffs(data, team1, team2, round1, round2):
+
+    @classmethod
+    def mount_game_playoffs(cls, data, team1, team2, round1, round2):
         matches1 = data['rounds'][round1]['matches']
 
         # recupera os dados do primeiro round da fase
-        match1_result = ChampionsLeagueModel.findTeamsInMatches(matches1, team1, team2)
+        match1_result = cls.find_teams_in_matches(matches1, team1, team2)
 
         result = dict()
         # verifica se a resposta esta com erro (nao encontrada a partida 1)
         if 'Error' in match1_result:
             matches2 = data['rounds'][round2]['matches']
             # recupera os dados do segundo round da fase
-            match2_result = ChampionsLeagueModel.findTeamsInMatches(matches2, team1, team2)
+            match2_result = cls.find_teams_in_matches(matches2, team1, team2)
 
             # verifica se a resposta esta com erro (nao encontrada a partida 2)
             if 'Error' in match2_result:
-                raise Exception('Match not found')
+                cls.raise_error_if_match_not_found()
             # Encontrou no round 2
             else:
                 result = match2_result
@@ -174,7 +186,9 @@ class ChampionsLeagueModel:
     """
     " Metodo para procurar se os times informados nas partidas
     """
-    def findTeamsInMatches(matches, t1, t2):
+
+    @staticmethod
+    def find_teams_in_matches(matches, t1, t2):
 
         match_found = dict()
         # cria um loop para verificar nas partidas se encontra a combinacao de times informados
@@ -188,21 +202,22 @@ class ChampionsLeagueModel:
                     break
                 else:
                     # retorna informacao de não encontrado time 2
-                    match_found = {'Error': 'Team2 ' + t2.lower() + ' Not found'}
+                    match_found = {'Error': 'Team 2 ' + t2.lower() + ' Not found'}
                     break
             else:
                 # retorna informacao de não encontrado time 1
-                match_found = {'Error': 'Team1 ' + t1.lower() + ' Not found'}
+                match_found = {'Error': 'Team 1 ' + t1.lower() + ' Not found'}
 
         return match_found
 
     """
     " Metodo que recupera as informacoes da final
     """
-    def getFinal(season, time1, time2):
 
-        if not os.path.isdir("data/" + season):
-            raise Exception('Season not found')
+    @classmethod
+    def get_final(cls, season, time1, time2):
+
+        cls.raise_error_if_season_not_found(season)
 
         # recupera os dados do dataset
         json_data = open('data/' + season + '/cl.json').read()
@@ -213,9 +228,9 @@ class ChampionsLeagueModel:
 
         # verifica se o time 1 e time 2 informados estao corretos
         if matches['team1']['key'] != time1.lower():
-            raise Exception('Invalid Team 1')
+            cls.raise_error_if_team_not_found(1, team=time1)
         if matches['team2']['key'] != time2.lower():
-            raise Exception('Invalid Team 2')
+            cls.raise_error_if_team_not_found(2, team=time2)
 
         # atribui os escores de cada time
         score1 = matches['score1']
@@ -227,9 +242,34 @@ class ChampionsLeagueModel:
             matches['team2']['name'])
 
         # recupera os dados sobre a fina; da temporada
-        finals = ChampionsLeagueModel.getAboutBySeason(season)
+        finals = ChampionsLeagueModel.get_about_by_season(season)
         # adiciona campeão e vice aos dados de retorno
         game['Champion'] = finals['champion']
         game['Runner-up'] = finals['runner-up']
 
         return game
+
+    """
+    " Metodo que gera exceção de temporada não encontrada
+    """
+
+    @staticmethod
+    def raise_error_if_season_not_found(season):
+        if not os.path.isdir("data/" + season):
+            raise Exception('Season not found')
+
+    """
+    " Metodo que gera exceção de partida não encontrada
+    """
+
+    @staticmethod
+    def raise_error_if_match_not_found():
+        raise Exception('Match not found')
+
+    """
+    " Metodo que gera exceção do time nao encontrado
+    """
+
+    @staticmethod
+    def raise_error_if_team_not_found(num, team):
+        raise Exception('Invalid Team ' + num + ' ' + team)

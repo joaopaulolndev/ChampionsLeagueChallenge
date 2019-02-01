@@ -168,6 +168,7 @@ conda search sanic --channel conda-forge
 ## References:
 
    - [Sanic Framework Documentation](https://sanic.readthedocs.io/en/latest/index.html)
+   - [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
    - [Sanic Feedstock](https://github.com/conda-forge/sanic-feedstock)
    - [UEFA Champions League Wikipedia](https://en.wikipedia.org/wiki/UEFA_Champions_League)
    - [2017–18 UEFA Champions League](https://en.wikipedia.org/wiki/2017%E2%80%9318_UEFA_Champions_League)
